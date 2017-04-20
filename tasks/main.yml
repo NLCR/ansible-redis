@@ -1,0 +1,10 @@
+---
+- name: EPEL repository is available
+  yum:
+    name: epel-release
+  tags: packages
+
+- name: redis is installed
+  yum:
+    name: redis
+  notify: start redis
