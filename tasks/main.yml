@@ -7,4 +7,9 @@
 - name: redis is installed
   yum:
     name: redis
-  notify: start redis
+
+- name: redis is started a ready to survive restarts
+  service:
+    name: redis
+    state: started
+    enabled: yes
